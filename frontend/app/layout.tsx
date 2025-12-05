@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { ChatProvider } from '@/src/context/ChatContext'
+import ChatButton from '@/src/components/ChatButton'
 
 export const metadata: Metadata = {
   title: 'Domicilia',
@@ -13,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ChatProvider>
+          {children}
+          <ChatButton />
+        </ChatProvider>
+      </body>
     </html>
   )
 }

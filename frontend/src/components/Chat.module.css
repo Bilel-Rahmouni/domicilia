@@ -1,0 +1,201 @@
+/* Chat Page - Design professionnel et épuré */
+
+.chatPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f9fafb;
+}
+
+.chatContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.companyBadge {
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.content {
+  padding: 32px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: all 0.2s;
+  color: #111827;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  padding: 12px 24px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.submitButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success Message */
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #10b981;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.successMessage p {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+.successSubtext {
+  margin-top: 8px !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #6b7280 !important;
+}
+
+/* Error Message */
+.errorMessage {
+  padding: 12px;
+  background: #fef2f2;
+  color: #dc2626;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  border: 1px solid #fecaca;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chatPage {
+    padding: 0;
+  }
+
+  .chatContainer {
+    max-width: 100%;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .header {
+    padding: 24px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
